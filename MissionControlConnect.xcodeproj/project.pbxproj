@@ -11,6 +11,7 @@
 		2C3976852368394600717A0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3976842368394600717A0C /* ViewController.swift */; };
 		2C3976872368394600717A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3976862368394600717A0C /* Assets.xcassets */; };
 		2C39768A2368394600717A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3976882368394600717A0C /* Main.storyboard */; };
+		2CCC0BE5236E92F0008B4808 /* privateAPIinterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC0BE4236E92F0008B4808 /* privateAPIinterface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +21,10 @@
 		2C3976862368394600717A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3976892368394600717A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C39768B2368394600717A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C39768C2368394600717A0C /* HelloWorld.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloWorld.entitlements; sourceTree = "<group>"; };
+		2C39768C2368394600717A0C /* MissionControlConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MissionControlConnect.entitlements; sourceTree = "<group>"; };
+		2CCC0BE3236E92EF008B4808 /* MissionControlConnect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MissionControlConnect-Bridging-Header.h"; sourceTree = "<group>"; };
+		2CCC0BE4236E92F0008B4808 /* privateAPIinterface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = privateAPIinterface.m; sourceTree = "<group>"; };
+		2CCC0BE6236E9732008B4808 /* privateAPIinterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = privateAPIinterface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +41,7 @@
 		2C3976762368394600717A0C = {
 			isa = PBXGroup;
 			children = (
-				2C3976812368394600717A0C /* HelloWorld */,
+				2C3976812368394600717A0C /* MissionControlConnect */,
 				2C3976802368394600717A0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,17 +54,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C3976812368394600717A0C /* HelloWorld */ = {
+		2C3976812368394600717A0C /* MissionControlConnect */ = {
 			isa = PBXGroup;
 			children = (
+				2CCC0BE6236E9732008B4808 /* privateAPIinterface.h */,
 				2C3976822368394600717A0C /* AppDelegate.swift */,
 				2C3976842368394600717A0C /* ViewController.swift */,
 				2C3976862368394600717A0C /* Assets.xcassets */,
 				2C3976882368394600717A0C /* Main.storyboard */,
 				2C39768B2368394600717A0C /* Info.plist */,
-				2C39768C2368394600717A0C /* HelloWorld.entitlements */,
+				2C39768C2368394600717A0C /* MissionControlConnect.entitlements */,
+				2CCC0BE4236E92F0008B4808 /* privateAPIinterface.m */,
+				2CCC0BE3236E92EF008B4808 /* MissionControlConnect-Bridging-Header.h */,
 			);
-			path = HelloWorld;
+			path = MissionControlConnect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,11 +102,12 @@
 				TargetAttributes = {
 					2C39767E2368394600717A0C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 2C39767A2368394600717A0C /* Build configuration list for PBXProject "HelloWorld" */;
+			buildConfigurationList = 2C39767A2368394600717A0C /* Build configuration list for PBXProject "MissionControlConnect" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3976852368394600717A0C /* ViewController.swift in Sources */,
+				2CCC0BE5236E92F0008B4808 /* privateAPIinterface.m in Sources */,
 				2C3976832368394600717A0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HelloWorld/HelloWorld.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -270,6 +280,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ryoma-Canastra.HelloWorld";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld/HelloWorld-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -278,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = HelloWorld/HelloWorld.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -285,6 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ryoma-Canastra.HelloWorld";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld/HelloWorld-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -292,7 +306,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C39767A2368394600717A0C /* Build configuration list for PBXProject "HelloWorld" */ = {
+		2C39767A2368394600717A0C /* Build configuration list for PBXProject "MissionControlConnect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C39768D2368394600717A0C /* Debug */,
